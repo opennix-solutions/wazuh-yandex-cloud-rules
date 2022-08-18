@@ -1,0 +1,103 @@
+<group name="yandex,local,">
+    <rule id="129001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.AddClusterHosts</field>
+        <description>Yandex: MBD.mongodb new hosts has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.AddClusterShard</field>
+        <description>Yandex: MBD.mongodb shard has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129003" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.BackupCluster</field>
+        <description>Yandex: MBD.mongodb backup has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.CreateCluster</field>
+        <description>Yandex: MBD.mongodb new cluster has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="129005" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.CreateDatabase</field>
+        <description>Yandex: MBD.mongodb new database has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129006" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.CreateUser</field>
+        <description>Yandex: MBD.mongodb user has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="129007" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.DeleteCluster</field>
+        <description>Yandex: MBD.mongodb clusters has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129008" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.DeleteClusterHosts</field>
+        <description>Yandex: MBD.mongodb hosts has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129009" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.DeleteClusterShard</field>
+        <description>Yandex: MBD.mongodb shard has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129010" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.DeleteDatabase</field>
+        <description>Yandex: MBD.mongodb database has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129011" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.DeleteUser</field>
+        <description>Yandex: MBD.mongodb database user has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129012" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.EnableClusterSharding	</field>
+        <description>Yandex: MBD.mongodb sharding has been enabled for a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129013" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.GrantUserPermission</field>
+        <description>Yandex: MBD.mongodb privileges to a database user has been assigned by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129014" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.MoveCluster</field>
+        <description>Yandex: MBD.mongodb cluster has been moved by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129015" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.RestoreCluster</field>
+        <description>Yandex: MBD.mongodb new cluster from a backup has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129016" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.RevokeUserPermission</field>
+        <description>Yandex: MBD.mongodb a database user's privileges has been revoked by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129017" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.StartCluster</field>
+        <description>Yandex: MBD.mongodb cluster has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129018" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.StopCluster</field>
+        <description>Yandex: MBD.mongodb cluster has been stopped by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129019" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.UpdateCluster</field>
+        <description>Yandex: MBD.mongodb cluster has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="129020" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mongodb.UpdateUser</field>
+        <description>Yandex: MBD.mongodb database user has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Managed Service for MongoDB -->
+</group>

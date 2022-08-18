@@ -1,0 +1,29 @@
+<group name="yandex,local,">
+    <!-- Audit Trails -->
+    <rule id="121001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.audittrails.CreateTrail</field>
+        <description>Yandex: Audit Trail has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="121002" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.audittrails.DeleteTrail</field>
+        <description>Yandex: Audit Trail has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="121003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.audittrails.SetTrailAccessBindings</field>
+        <description>Yandex: Audit Trail settings has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="121004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.audittrails.UpdateTrailAccessBindings</field>
+        <description>Yandex: Audit Trail UpdateTrailAccessBindings has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="121005" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.audittrails.UpdateTrail</field>
+        <description>Yandex: Audit Trail UpdateTrail has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Audit Trails -->
+</group>

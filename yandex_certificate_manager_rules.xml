@@ -1,0 +1,29 @@
+<group name="yandex,local,">
+    <rule id="122001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.certificatemanager.CreateCertificate</field>
+        <description>Yandex: Certificate has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="122002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.certificatemanager.UpdateCertificate</field>
+        <description>Yandex: Certificate has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="122003" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.certificatemanager.DeleteCertificate</field>
+        <description>Yandex: Certificate has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="122004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.certificatemanager.UpdateCertificateAccessBindings</field>
+        <description>Yandex: Certificate access bindings has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="122005" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.certificatemanager.SetCertificateAccessBindings</field>
+        <description>Yandex: Certificate setting access has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Certificate Manager -->
+
+</group>

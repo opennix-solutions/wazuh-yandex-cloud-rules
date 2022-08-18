@@ -1,0 +1,34 @@
+<group name="yandex,local,">
+<!-- Key Management Service -->
+    <rule id="126001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.kms.CancelDeleteSymmetricKey</field>
+        <description>Yandex: KMS scheduled key destruction has been canceled by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="126002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.kms.CancelSymmetricKeyVersionDestruction</field>
+        <description>Yandex: KMS previously planned destruction of a symmetric key version has been canceled by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="126003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.kms.CreateSymmetricKey</field>
+        <description>Yandex: KMS symmetric key has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="126004" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.kms.DeleteSymmetricKey</field>
+        <description>Yandex: KMS symmetric key has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="126005" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.kms.RotateSymmetricKey</field>
+        <description>Yandex: KMS symmetric key has been rotated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="126006" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.kms.RotateSymmetricKey</field>
+        <description>Yandex: KMS symmetric key has been rotated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Key Management Service -->
+</group>

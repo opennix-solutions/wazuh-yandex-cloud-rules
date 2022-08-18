@@ -1,0 +1,28 @@
+<group name="yandex,local,">
+    <rule id="123001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.logging.CreateLogGroup</field>
+        <description>Yandex: Cloud Logging group has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="123002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.logging.UpdateLogGroup</field>
+        <description>Yandex: Cloud Logging group has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="123003" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.logging.DeleteLogGroup</field>
+        <description>Yandex: Cloud Logging group has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="123004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.logging.SetLogGroupAccessBindings</field>
+        <description>Yandex: Cloud Logging group access has been setuped by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="123005" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.logging.UpdateLogGroupAccessBindings</field>
+        <description>Yandex: Cloud Logging group access has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Cloud Logging -->
+</group>

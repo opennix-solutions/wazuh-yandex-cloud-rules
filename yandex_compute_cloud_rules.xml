@@ -1,0 +1,118 @@
+<group name="yandex,local,">
+    <rule id="124001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.AddInstanceOneToOneNat</field>
+        <description>Yandex: Compute Cloud public IP address has been added by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.AttachInstanceDisk</field>
+        <description>Yandex: Compute Cloud disk has been attached by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="124003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.AttachInstanceFilesystem</field>
+        <description>Yandex: Compute Cloud file system has been connected by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="124004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.ChangeDiskStatus</field>
+        <description>Yandex: Compute Cloud non-replicated disk status has been changed by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124005" level="5">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.CrashInstance</field>
+        <description>Yandex: Compute Cloud has been crushed by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124006" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.CreateDisk</field>
+        <description>Yandex: Compute Cloud disk has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124007" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.CreateFilesystem</field>
+        <description>Yandex: Compute Cloud filesystem has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124008" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.CreateImage</field>
+        <description>Yandex: Compute Cloud disk image has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124009" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.CreateInstance</field>
+        <description>Yandex: Compute Cloud instance has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124010" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.CreateSnapshot</field>
+        <description>Yandex: Compute Cloud disk snapshot has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="124011" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.DeleteDisk</field>
+        <description>Yandex: Compute Cloud disk has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="124012" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.DeleteFilesystem</field>
+        <description>Yandex: Compute Cloud filesystem has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124013" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.DeleteImage</field>
+        <description>Yandex: Compute Cloud disk image has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124014" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.DeleteInstance</field>
+        <description>Yandex: Compute Cloud instance has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124015" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.DeleteSnapshot</field>
+        <description>Yandex: Compute Cloud spanshot has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="124016" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.DetachInstanceDisk</field>
+        <description>Yandex: Compute Cloud disk has been detached from instance by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="124017" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.DetachInstanceFilesystem</field>
+        <description>Yandex: Compute Cloud filesystem has been detached from instance by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124018" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.PreemptInstance</field>
+        <description>Yandex: Compute Cloud instance has been stopped from command line by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124019" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.GuestStopInstance</field>
+        <description>Yandex: Compute Cloud instance has been interrupted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124020" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.RemoveInstanceOneToOneNat</field>
+        <description>Yandex: Compute Cloud public ip has been removed by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124021" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.RestartInstance</field>
+        <description>Yandex: Compute Cloud instance has been restarted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124022" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.StartInstance</field>
+        <description>Yandex: Compute Cloud instance has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="124023" level="0">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.compute.StopInstance</field>
+        <description>Yandex: Compute Cloud instance has been stopped by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Compute Cloud -->
+</group>

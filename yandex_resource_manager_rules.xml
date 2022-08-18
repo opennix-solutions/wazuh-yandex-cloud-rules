@@ -1,0 +1,44 @@
+<group name="yandex,local,">
+<!-- Resource Manager -->
+    <rule id="135001" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.resourcemanager.CreateCloud</field>
+        <description>Yandex: resourcemanager a cloud has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="135002" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.resourcemanager.CreateFolder</field>
+        <description>Yandex: resourcemanager a folder has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="135003" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.resourcemanager.DeleteCloud</field>
+        <description>Yandex: resourcemanager a cloud has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="135004" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.resourcemanager.DeleteFolder</field>
+        <description>Yandex: resourcemanager a folder has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="135005" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.resourcemanager.UpdateCloud</field>
+        <description>Yandex: resourcemanager a cloud has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="135006" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.resourcemanager.UpdateCloudAccessBindings</field>
+        <description>Yandex: resourcemanager access bindings for a cloud has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="120193" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.resourcemanager.UpdateFolder</field>
+        <description>Yandex: resourcemanager a folder has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="135007" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.resourcemanager.UpdateFolderAccessBindings</field>
+        <description>Yandex: resourcemanager access bindings for a folder has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Resource Manager -->
+</group>

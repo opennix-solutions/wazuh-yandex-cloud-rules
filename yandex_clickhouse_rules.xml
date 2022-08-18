@@ -1,0 +1,153 @@
+<group name="yandex,local,">
+    <rule id="128001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.AddClusterHosts</field>
+        <description>Yandex: MBD.clickhouse host has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.AddClusterShard</field>
+        <description>Yandex: MBD.clickhouse shard has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.AddClusterZookeeper</field>
+        <description>Yandex: MBD.clickhouse ZooKeeper sub-cluster has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.CreateCluster</field>
+        <description>Yandex: MBD.clickhouse cluster has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128005" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.CreateClusterExternalDictionary</field>
+        <description>Yandex: MBD.clickhouse external dictionary has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128006" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.CreateDatabase</field>
+        <description>Yandex: MBD.clickhouse database has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128007" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.CreateFormatSchema</field>
+        <description>Yandex: MBD.clickhouse data format schema has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128008" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.CreateMlModel</field>
+        <description>Yandex: MBD.clickhouse machine learning model has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128009" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.CreateShardGroup</field>
+        <description>Yandex: MBD.clickhouse shard group has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128010" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.CreateUser</field>
+        <description>Yandex: MBD.clickhouse database user has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128011" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteCluster</field>
+        <description>Yandex: MBD.clickhouse cluster has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="128012" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteClusterExternalDictionary</field>
+        <description>Yandex: MBD.clickhouse external dictionary has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128013" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteClusterHosts</field>
+        <description>Yandex: MBD.clickhouse hosts has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128014" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteClusterShard</field>
+        <description>Yandex: MBD.clickhouse shard has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128015" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteDatabase</field>
+        <description>Yandex: MBD.clickhouse database has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128016" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteFormatSchema</field>
+        <description>Yandex: MBD.clickhouse data format schema has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128017" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteMlModel</field>
+        <description>Yandex: MBD.clickhouse machine learning model has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128018" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteShardGroup</field>
+        <description>Yandex: MBD.clickhouse shard group has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128019" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.DeleteUser</field>
+        <description>Yandex: MBD.clickhouse database user has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128020" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.GrantUserPermission</field>
+        <description>Yandex: MBD.clickhouse privileges to a database user has been assigned by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128021" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.MoveCluster</field>
+        <description>Yandex: MBD.clickhouse cluster has been moved by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128022" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.StartCluster</field>
+        <description>Yandex: MBD.clickhouse cluster has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128023" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.StopCluster</field>
+        <description>Yandex: MBD.clickhouse cluster has been stopped by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128024" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.UpdateCluster</field>
+        <description>Yandex: MBD.clickhouse cluster has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128025" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.UpdateClusterExternalDictionary</field>
+        <description>Yandex: MBD.clickhouse external dictionary has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128026" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.UpdateClusterShard</field>
+        <description>Yandex: MBD.clickhouse shard has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128027" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.UpdateFormatSchema</field>
+        <description>Yandex: MBD.clickhouse data schema format has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128028" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.UpdateMlModel</field>
+        <description>Yandex: MBD.clickhouse machine learning model has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128029" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.UpdateShardGroup</field>
+        <description>Yandex: MBD.clickhouse shard group has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="128030" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.clickhouse.UpdateUser</field>
+        <description>Yandex: MBD.clickhouse database user has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Managed Service for ClickHouse -->
+</group>

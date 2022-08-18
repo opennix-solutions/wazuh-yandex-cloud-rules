@@ -1,0 +1,6 @@
+<group name="yandex,local,">
+    <rule id="160001" level="12" >
+        <if_sid>160000</if_sid>
+        <description>Yandex: New unauthorized event for $(event_type) has been detected, remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+</group>

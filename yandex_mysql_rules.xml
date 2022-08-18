@@ -1,0 +1,94 @@
+<group name="yandex,local,">
+<!-- Managed Service for MySQL -->
+    <rule id="130001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.AddClusterHosts</field>
+        <description>Yandex: MBD.mysql new hosts has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130002" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.BackupCluster</field>
+        <description>Yandex: MBD.mysql backup has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.CreateCluster</field>
+        <description>Yandex: MBD.mysql new cluster has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="130004" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.CreateDatabase</field>
+        <description>Yandex: MBD.mysql new database has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130005" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.CreateUser</field>
+        <description>Yandex: MBD.mysql user has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="130006" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.DeleteCluster</field>
+        <description>Yandex: MBD.mysql clusters has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130007" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.DeleteClusterHosts</field>
+        <description>Yandex: MBD.mysql hosts has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130008" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.DeleteDatabase</field>
+        <description>Yandex: MBD.mysql database has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130009" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.DeleteUser</field>
+        <description>Yandex: MBD.mysql database user has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130010" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.GrantUserPermission</field>
+        <description>Yandex: MBD.mysql privileges to a database user has been assigned by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130011" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.MoveCluster</field>
+        <description>Yandex: MBD.mysql cluster has been moved by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130012" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.RescheduleMaintenance</field>
+        <description>Yandex: MBD.mysql maintenance schedule has been rescheduled by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130013" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.RestoreCluster</field>
+        <description>Yandex: MBD.mysql new cluster from a backup has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130014" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.RevokeUserPermission</field>
+        <description>Yandex: MBD.mysql a database user's privileges has been revoked by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130015" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.StartCluster</field>
+        <description>Yandex: MBD.mysql cluster has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130016" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.StopCluster</field>
+        <description>Yandex: MBD.mysql cluster has been stopped by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130017" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.UpdateCluster</field>
+        <description>Yandex: MBD.mysql cluster has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="130018" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.mysql.UpdateUser</field>
+        <description>Yandex: MBD.mysql database user has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Managed Service for MySQL -->
+</group>

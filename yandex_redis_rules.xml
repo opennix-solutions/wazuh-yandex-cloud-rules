@@ -1,0 +1,74 @@
+<group name="yandex,local,">
+<!-- Managed Service for Redis -->
+    <rule id="132001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.AddClusterHosts</field>
+        <description>Yandex: MBD.redis new hosts has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132002" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.AddClusterShard</field>
+        <description>Yandex: MBD.redis shard has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132003" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.BackupCluster</field>
+        <description>Yandex: MBD.redis backup has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.CreateCluster</field>
+        <description>Yandex: MBD.redis new cluster has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132005" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.DeleteCluster</field>
+        <description>Yandex: MBD.redis clusters has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132006" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.DeleteClusterHosts</field>
+        <description>Yandex: MBD.redis hosts has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132007" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.DeleteClusterShard</field>
+        <description>Yandex: MBD.redis shard has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132008" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.MoveCluster</field>
+        <description>Yandex: MBD.redis cluster has been moved by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132009" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.RestoreCluster</field>
+        <description>Yandex: MBD.redis new cluster from a backup has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132010" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.RebalanceCluster</field>
+        <description>Yandex: MBD.redis cluster has been rebalanced by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132011" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.StartCluster</field>
+        <description>Yandex: MBD.redis cluster has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132012" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.StopCluster</field>
+        <description>Yandex: MBD.redis cluster has been stopped by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132013" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.UpdateCluster</field>
+        <description>Yandex: MBD.redis cluster has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="132014" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.redis.StartClusterFailover</field>
+        <description>Yandex: MBD.redis master switching for a cluster has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Managed Service for Redis -->
+</group>

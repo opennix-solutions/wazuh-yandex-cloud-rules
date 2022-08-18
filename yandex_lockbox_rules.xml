@@ -1,0 +1,34 @@
+<group name="yandex,local,">
+<!-- Yandex Lockbox -->
+    <rule id="127001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.lockbox.AddVersion</field>
+        <description>Yandex: LOCKBOX version of a secret has been added by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="127002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.lockbox.ActivateSecret</field>
+        <description>Yandex: LOCKBOX secret has been activated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="127003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.lockbox.CancelVersionDestruction</field>
+        <description>Yandex: LOCKBOX previously scheduled destruction of a secret version has been canceled by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="127004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.lockbox.CreateSecret</field>
+        <description>Yandex: LOCKBOX secret has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="127005" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.lockbox.DeactivateSecret</field>
+        <description>Yandex: LOCKBOX secret has been deactivated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="127006" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.lockbox.DeleteSecret</field>
+        <description>Yandex: LOCKBOX secret has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Yandex Lockbox -->
+</group>

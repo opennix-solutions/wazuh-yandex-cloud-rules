@@ -1,0 +1,80 @@
+<!-- Local rules -->
+<group name="local,syslog,sshd,">
+  <rule id="100001" level="5">
+    <if_sid>5716</if_sid>
+    <srcip>1.1.1.1</srcip>
+    <description>sshd: authentication failed from IP 1.1.1.1.</description>
+    <group>authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,</group>
+  </rule>
+
+</group>
+<group name="log4j, attack,">
+  <rule id="110002" level="7">
+    <if_group>web|accesslog|attack</if_group>
+    <regex type="pcre2">(?i)(((\$|24)\S*)((\{|7B)\S*)((\S*j\S*n\S*d\S*i))|JHtqbmRp)</regex>
+    <description>Possible Log4j RCE attack attempt detected.</description>
+    <mitre>
+      <id>T1190</id>
+      <id>T1210</id>
+      <id>T1211</id>
+    </mitre>
+  </rule>
+
+  <rule id="110003" level="12">
+    <if_sid>110002</if_sid>
+    <regex type="pcre2">ldap[s]?|rmi|dns|nis|iiop|corba|nds|http|lower|upper|(\$\{\S*\w\}\S*)+</regex>
+    <description>Log4j RCE attack attempt detected.</description>
+    <mitre>
+      <id>T1190</id>
+      <id>T1210</id>
+      <id>T1211</id>
+    </mitre>
+  </rule>
+
+</group>
+
+<group name="yandex,local,">
+    <rule id="160000" level="0">
+        <decoded_as>json</decoded_as>
+        <field name="event_type">\.+</field>
+        <field name="event_time">\.+</field>
+        <field name="authentication.authenticated" type="pcre2">false</field>
+        <description>Yandex Cloud authentication events.</description>
+    </rule>
+    <rule id="120000" level="0">
+        <decoded_as>json</decoded_as>
+        <field name="event_type">\.+</field>
+        <field name="event_time">\.+</field>
+        <description>Yandex Cloud audit events</description>
+    </rule>
+</group>
+<group name="syslog">
+  <rule id="191111" level="12">
+    <program_name>pkexec</program_name>
+    <match>The value for the SHELL variable was not found the /etc/shells file [USER=root]</match>
+    <description>Possible attempt to exploit a local privilege escalation vulnerability in polkit pkexec (CVE-2021-4034) via unsecure environment variable injection.</description>
+  </rule>
+</group>
+<group name="spring4shell, attack,">
+  <rule id="19991" level="12">
+    <if_group>web|accesslog|attack</if_group>
+    <regex type="pcre2">%25%7Bc2%7Di%20if\(%22j%22.equals\(request.getParameter\(%22pwd%22\)\)\)%7B%20java.io.InputStream%20in%20%3D%20%25%7Bc1%7Di.getRuntime\S*.exec\(request.getParameter\(%22cmd%22\)\).getInputStream\(\)%3B%20int%20a%20%3D%20-1%3B%20byte%5B%5D%20b%20%3D%20new%20byte%5B2048%5D%3B%20while\(\(a%3Din.read\(b\)\)\S*3D-1\)%7B%20out.println\(new%20String\(b\)\)%3B%20%7D%20%7D%20%25%7Bsuffix%7Di</regex>
+    <description>Possible Spring4Shell RCE (CVE-2022-22965) attack attempt detected.</description>
+    <mitre>
+      <id>T1190</id>
+      <id>T1210</id>
+      <id>T1211</id>
+    </mitre>
+  </rule>
+
+  <rule id="19992" level="12">
+    <if_group>web|accesslog|attack</if_group>
+    <regex type="pcre2">\.jsp\?pwd=\S*\x26cmd=\S*|\.jsp\?cmd=\S*\x26pwd=\S*|\.jsp\?id=(whoami|cat%20\/etc\/passwd|cat+\/etc\/passwd|ifconfig|ipconfig)</regex>
+    <description>JSP webshell HTTP request pattern detected.</description>
+    <mitre>
+      <id>T1190</id>
+      <id>T1210</id>
+      <id>T1211</id>
+    </mitre>
+  </rule>
+</group>

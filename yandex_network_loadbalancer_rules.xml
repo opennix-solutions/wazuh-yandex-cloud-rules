@@ -1,0 +1,74 @@
+<group name="yandex,local,">
+<!-- Network Load Balancer -->
+    <rule id="133001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.AddNetworkLoadBalancerListener</field>
+        <description>Yandex: loadbalancer listener to network load balancer has been added by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.AddTargetGroupTargets</field>
+        <description>Yandex: loadbalancer a VM has been added to a target group by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.AttachNetworkLoadBalancerTargetGroup</field>
+        <description>Yandex: loadbalancer a VM has been added to a target group by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.CreateNetworkLoadBalancer</field>
+        <description>Yandex: loadbalancer network load balancer has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133005" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.CreateTargetGroup</field>
+        <description>Yandex: loadbalancer a target group has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133006" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.DeleteNetworkLoadBalancer</field>
+        <description>Yandex: loadbalancer has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133007" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.DeleteTargetGroup</field>
+        <description>Yandex: loadbalancer a  target group has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133008" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.DetachNetworkLoadBalancerTargetGroup</field>
+        <description>Yandex: loadbalancer a target group has been detached from a network load balancer by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133009" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.RemoveNetworkLoadBalancerListener</field>
+        <description>Yandex: loadbalancer listener has been deleted from a network load balancer by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133010" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.RemoveTargetGroupTargets</field>
+        <description>Yandex: loadbalancer VM has been deleted from a target group by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133011" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.StartNetworkLoadBalancer</field>
+        <description>Yandex: loadbalancer has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133012" level="5">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.StopNetworkLoadBalancer</field>
+        <description>Yandex: loadbalancer has been stopped by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133013" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.UpdateNetworkLoadBalancer</field>
+        <description>Yandex: loadbalancer has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="133014" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.loadbalancer.UpdateTargetGroup</field>
+        <description>Yandex: loadbalancer a target group has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Network Load Balancer -->
+</group>

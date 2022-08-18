@@ -1,0 +1,99 @@
+<group name="yandex,local,">
+<!-- Managed Service for PostgreSQL -->
+    <rule id="131001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.AddClusterHosts</field>
+        <description>Yandex: MBD.postgresql new hosts has been added to a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131002" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.BackupCluster</field>
+        <description>Yandex: MBD.postgresql backup has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.CreateCluster</field>
+        <description>Yandex: MBD.postgresql new cluster has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="131004" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.CreateDatabase</field>
+        <description>Yandex: MBD.postgresql new database has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="120133" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.CreateUser</field>
+        <description>Yandex: MBD.postgresql user has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="131005" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.DeleteCluster</field>
+        <description>Yandex: MBD.postgresql clusters has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131006" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.DeleteClusterHosts</field>
+        <description>Yandex: MBD.postgresql hosts has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131007" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.DeleteDatabase</field>
+        <description>Yandex: MBD.postgresql database has been deleted from a cluster by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131008" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.DeleteUser</field>
+        <description>Yandex: MBD.postgresql database user has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131009" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.GrantUserPermission</field>
+        <description>Yandex: MBD.postgresql privileges to a database user has been assigned by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131010" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.MoveCluster</field>
+        <description>Yandex: MBD.postgresql cluster has been moved by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131011" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.RestoreCluster</field>
+        <description>Yandex: MBD.postgresql new cluster from a backup has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131012" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.RevokeUserPermission</field>
+        <description>Yandex: MBD.postgresql a database user's privileges has been revoked by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131013" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.StartCluster</field>
+        <description>Yandex: MBD.postgresql cluster has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131014" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.StopCluster</field>
+        <description>Yandex: MBD.postgresql cluster has been stopped by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131015" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.UpdateCluster</field>
+        <description>Yandex: MBD.postgresql cluster has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131016" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.UpdateUser</field>
+        <description>Yandex: MBD.postgresql database user has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131017" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.UpdateClusterHosts</field>
+        <description>Yandex: MBD.postgresql hosts in a cluster has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="131018" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.mdb.postgresql.UpdateDatabase</field>
+        <description>Yandex: MBD.postgresql a database has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- Managed Service for PostgreSQL -->
+</group>
