@@ -1,0 +1,114 @@
+<group name="yandex,local,">
+<!-- containerregistry -->
+    <rule id="138001" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.CreateImage</field>
+        <description>Yandex: Docker image has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138002" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.CreateImageTag</field>
+        <description>Yandex: Docker image tag has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138003" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.CreateLifecyclePolicy</field>
+        <description>Yandex: Lifecycle policy for Docker images has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138004" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.CreateRegistry</field>
+        <description>Yandex: Registry has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138005" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.CreateRepository</field>
+        <description>Yandex: Repository has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138006" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.CreateScanPolicy</field>
+        <description>Yandex: Scan policy has been created by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138007" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.DeleteImage</field>
+        <description>Yandex: Docker image has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138008" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.DeleteImageTag</field>
+        <description>Yandex: Docker image tag has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138009" level="5">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.DeleteLifecyclePolicy</field>
+        <description>Yandex: Lifecycle policy has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138010" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.DeleteRegistry</field>
+        <description>Yandex: Registry has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138011" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.DeleteRepository</field>
+        <description>Yandex: Repository has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138012" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.DeleteScanPolicy</field>
+        <description>Yandex: Scan policy has been deleted by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138013" level="1">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.ScanImage</field>
+        <description>Yandex: Scanning image has been started by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="138014" level="12">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.UpdateIpPermission</field>
+        <description>Yandex: Permissions has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138015" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.UpdateLifecyclePolicy</field>
+        <description>Yandex: Lifecycle policy has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138016" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.UpdateRegistry</field>
+        <description>Yandex: Registry has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138017" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.UpdateScanPolicy</field>
+        <description>Yandex: Scan policy has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138018" level="3">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.UpdateScanPolicy</field>
+        <description>Yandex: Scan policy has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138019" level="5">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.UpdateRegistryAccessBindings</field>
+        <description>Yandex: Access bindings for a registry has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138020" level="5">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.UpdateRepositoryAccessBindings</field>
+        <description>Yandex: Access bindings for a repository has been updated by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+    <rule id="138021" level="5">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.SetRegistryAccessBindings</field>
+        <description>Yandex: Access bindings for a registry has been set by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+     <rule id="138022" level="5">
+        <if_sid>120000</if_sid>
+        <field name="event_type" type="pcre2">yandex.cloud.audit.containerregistry.SetRepositoryAccessBindings</field>
+        <description>Yandex: Access bindings for a repository has been set by - $(authentication.subject_name), remote_address - $(request_metadata.remote_address)</description>
+    </rule>
+<!-- containerregistry -->
+</group>
